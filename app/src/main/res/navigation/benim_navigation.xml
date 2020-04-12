@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/benim_navigation"
+    app:startDestination="@id/birinciFragment">
+
+    <fragment
+        android:id="@+id/birinciFragment"
+        android:name="com.atilsamancioglu.navigationkotlin.BirinciFragment"
+        android:label="BirinciFragment" >
+        <action
+            android:id="@+id/action_birinciFragment_to_ikinciFragment"
+            app:destination="@id/ikinciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikinciFragment"
+        android:name="com.atilsamancioglu.navigationkotlin.IkinciFragment"
+        android:label="IkinciFragment" >
+        <action
+            android:id="@+id/action_ikinciFragment_to_birinciFragment"
+            app:destination="@id/birinciFragment" />
+        <argument
+            android:name="kullaniciYasi"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
